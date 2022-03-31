@@ -6,4 +6,8 @@ class Product:
         self.quantity = quantity
 
     def __str__(self):
+        """
+        Gives string representation of the products - price and quantity
+        :return: string name - price - quantity
+        """
         return "{} - price: {} quantity: {}".format(self.name, self.price, self.quantity)

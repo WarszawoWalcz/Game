@@ -9,11 +9,25 @@ class Question:
         return user_answer == self.correct_answer
 
     def __str__(self):
+        """
+        String representation of questions
+        :return: string representation of text question
+        """
         return "___________\nGeneral question: {}" \
-               "\nMoney: +{}\n___________\n"\
-            .format(self.text_question, self.money_prize)
+               "\n___________\n" \
+            .format(self.text_question)
 
     def answer_string(self):
+        """
+        String representation of the answer for the question
+        :return: string answer
+        """
         answer = str(self.correct_answer)
         return answer
 
+    def add_question(self, question):
+        """
+        Adds question to the text question
+        :param question:
+        """
+        self.text_question = question
